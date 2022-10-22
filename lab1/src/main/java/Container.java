@@ -4,8 +4,12 @@ public class Container <T extends IAggregable<T, E> & IDeeplyCloneable<T>, E> im
 
     private final List<T> elements;
 
-    public Container(List<T> elements) {
-        this.elements = elements;
+    public Container(List<T> elements) throws Exception {
+        if (elements == null) {
+            throw new Exception("error");
+        } else {
+            this.elements = elements;
+        }
     }
 
     @Override
@@ -24,6 +28,6 @@ public class Container <T extends IAggregable<T, E> & IDeeplyCloneable<T>, E> im
 
     @Override
     public T cloneElementAtIndex(int index) {
-        return this.elements.get(index);
+        return this.elements.get(index).deepClone();
     }
 }
