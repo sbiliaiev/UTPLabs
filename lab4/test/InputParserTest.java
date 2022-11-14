@@ -26,7 +26,7 @@ class InputParserTest {
 
     @Test
     void parse_badPatternFormat_throwsParseException() {
-        File file = new File("/Users/sbiliaiev/Documents/University/UTP/lab4/test/data/bad-parsing-data.txt");
+        File file = new File("/Users/sbiliaiev/Documents/University/UTP/UTPLabs/lab4/test/data/bad-parsing-data.txt");
         Exception exception = assertThrows(PatternSyntaxException.class, () -> {
             InputParser.parse(file);
         });
@@ -34,7 +34,7 @@ class InputParserTest {
 
     @Test
     void parse_emptyFile_returnsEmptyList() throws FileNotFoundException, ParseException {
-        File file = new File("/Users/sbiliaiev/Documents/University/UTP/lab4/test/data/empty-data.txt");
+        File file = new File("/Users/sbiliaiev/Documents/University/UTP/UTPLabs/lab4/test/data/empty-data.txt");
         List<Person> list = InputParser.parse(file);
         assertEquals(0, list.size());
     }
@@ -42,7 +42,7 @@ class InputParserTest {
     @Test
     void parse_correctPattern_returnsPersonList() throws FileNotFoundException, ParseException {
         String[] names = {"John", "Mark", "John", "Alex", "Brad", "Johnny", "Kratos"};
-        File file = new File("/Users/sbiliaiev/Documents/University/UTP/lab4/test/data/person-data.txt");
+        File file = new File("/Users/sbiliaiev/Documents/University/UTP/UTPLabs/lab4/test/data/person-data.txt");
         List<Person> list = InputParser.parse(file);
         assertEquals(7, list.size());
         int index = 0;

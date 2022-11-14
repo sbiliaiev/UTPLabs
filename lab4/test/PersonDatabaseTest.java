@@ -18,7 +18,7 @@ class PersonDatabaseTest {
     void setUp() throws FileNotFoundException, ParseException {
         database = new PersonDatabase(
             InputParser.parse(
-                new File("/Users/sbiliaiev/Documents/University/UTP/lab4/test/data/person-data.txt")
+                new File("/Users/sbiliaiev/Documents/University/UTP/UTPLabs/lab4/test/data/person-data.txt")
             )
         );
     }
