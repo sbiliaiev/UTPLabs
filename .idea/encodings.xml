@@ -10,5 +10,31 @@
     <file url="file://$PROJECT_DIR$/src/main/java/lab1/IAggregable.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/main/java/lab1/IContainer.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/main/java/lab1/IDeeplyCloneable.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab2/src/main/java/HumanResourcesStatistics.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab2/src/main/java/employee/Employee.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab2/src/main/java/employee/Manager.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab2/src/main/java/employee/Person.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab2/src/main/java/employee/Trainee.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab2/src/main/java/employee/Worker.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab2/src/main/java/employee/package-info.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab2/src/main/java/payroll/PayrollEntry.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab2/src/main/java/payroll/package-info.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab3/src/main/java/HumanResourcesStatistics.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab3/src/main/java/employee/Employee.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab3/src/main/java/employee/Manager.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab3/src/main/java/employee/Person.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab3/src/main/java/employee/Trainee.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab3/src/main/java/employee/Worker.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab3/src/main/java/payroll/PayrollEntry.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab4/src/main/java/InputParser.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab4/src/main/java/PersonDatabase.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab4/src/main/java/PersonDatabaseAntiPattern.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab4/src/main/java/PersonDatabaseLazyLoad.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab4/src/main/java/comparators/BirthdateComparator.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab4/src/main/java/comparators/FirstNameComparator.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab4/src/main/java/comparators/package-info.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab4/src/main/java/entities/Person.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab4/src/main/java/entities/Person.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../lab4/src/main/java/package-info.java" charset="windows-1252" />
   </component>
 </project>
