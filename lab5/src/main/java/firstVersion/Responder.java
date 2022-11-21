@@ -1,4 +1,4 @@
-package uglyCode;
+package firstVersion;
 
 import java.time.LocalDateTime;
 import java.util.PriorityQueue;

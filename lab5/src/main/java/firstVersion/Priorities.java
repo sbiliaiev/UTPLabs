@@ -1,4 +1,4 @@
-package uglyCode;
+package firstVersion;
 
 public enum Priorities {
     HIGH,
