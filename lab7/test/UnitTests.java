@@ -1,70 +1,69 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import parsers.BasicParser;
+import parsers.JarParser;
 import parsers.ZipParser;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UnitTests {
+    static String existingFileName;
+    static String existingFileContent;
+    static String unExistingFileName;
+    static String unExistingFileContent;
+    static String filePathBasic;
+    static String filePathZip;
+    static String filePathJar;
+    static String notFound;
+
+    @BeforeAll
+    public static void beforeAll() {
+        existingFileName = "hello_world";
+        existingFileContent = "hello world";
+        unExistingFileName = "hello_world_fake";
+        unExistingFileContent = "hello world fake";
+        filePathBasic = "/Users/sbiliaiev/Documents/University/UTP/UTPLabs/TestData";
+        filePathZip = filePathBasic + "/archive.zip";
+        filePathJar = filePathBasic + "/archive.jar";
+        notFound = "Not found";
+    }
+
     @Test
     void shouldFindGeneralFile() throws FileNotFoundException {
-        String filePath = "/Users/sbiliaiev/Documents/University/UTP/UTPLabs/TestData";
-        String existingFileName = "hello_world";
-        String existingFileContent = "hello world";
-
-        assertEquals(existingFileName + ".txt", BasicParser.findFileByName(filePath, existingFileName));
-        assertEquals(existingFileName + ".txt", BasicParser.findFileByContent(filePath, existingFileContent));
+        assertEquals(existingFileName + ".txt", BasicParser.findFileByName(filePathBasic, existingFileName));
+        assertEquals(existingFileName + ".txt", BasicParser.findFileByContent(filePathBasic, existingFileContent));
     }
 
     @Test
     void shouldNotFindGeneralFile() throws FileNotFoundException {
-        String filePath = "/Users/sbiliaiev/Documents/University/UTP/UTPLabs/TestData/fake";
-        String existingFileName = "hello_world";
-        String existingFileContent = "hello world";
-
-        assertEquals("Not found", BasicParser.findFileByName(filePath, existingFileName));
-        assertEquals("Not found", BasicParser.findFileByContent(filePath, existingFileContent));
+        assertEquals(notFound, BasicParser.findFileByName(filePathBasic + "/fake", existingFileName));
+        assertEquals(notFound, BasicParser.findFileByContent(filePathBasic + "/fake", existingFileContent));
     }
 
     @Test
     void shouldFindZipFile() throws IOException {
-        String filePath = "/Users/sbiliaiev/Documents/University/UTP/UTPLabs/TestData/archive.zip";
-        String existingFileName = "hello_world";
-        String existingFileContent = "hello world";
-
-        assertEquals(existingFileName + ".txt", ZipParser.findFileByName(filePath, existingFileName));
-        assertTrue(ZipParser.findFileByContent(filePath, existingFileContent).size() > 0);
+        assertEquals(existingFileName + ".txt", ZipParser.findFileByName(filePathZip, existingFileName));
+        assertTrue(ZipParser.findFileByContent(filePathZip, existingFileContent).size() > 0);
     }
 
     @Test
     void shouldNotFindZipFile() throws IOException {
-        String filePath = "/Users/sbiliaiev/Documents/University/UTP/UTPLabs/TestData/archive.zip";
-        String existingFileName = "hello_world_fake";
-        String existingFileContent = "hello world fake";
-
-        assertEquals("Not found", ZipParser.findFileByName(filePath, existingFileName));
-        assertEquals(0, ZipParser.findFileByContent(filePath, existingFileContent).size());
+        assertEquals(notFound, ZipParser.findFileByName(filePathZip, unExistingFileName));
+        assertEquals(0, ZipParser.findFileByContent(filePathZip, unExistingFileContent).size());
     }
 
     @Test
     void shouldFindJarFile() throws IOException {
-        String filePath = "/Users/sbiliaiev/Documents/University/UTP/UTPLabs/TestData/archive.jar";
-        String existingFileName = "hello_world";
-        String existingFileContent = "hello world";
-
-        assertEquals(existingFileName + ".txt", ZipParser.findFileByName(filePath, existingFileName));
-        assertTrue(ZipParser.findFileByContent(filePath, existingFileContent).size() > 0);
+        assertEquals(existingFileName + ".txt", JarParser.findFileByName(filePathJar, existingFileName));
+        assertTrue(JarParser.findFileByContent(filePathJar, existingFileContent).size() > 0);
     }
 
     @Test
     void shouldNotFindJarFile() throws IOException {
-        String filePath = "/Users/sbiliaiev/Documents/University/UTP/UTPLabs/TestData/archive.zip";
-        String existingFileName = "hello_world_fake";
-        String existingFileContent = "hello world fake";
-
-        assertEquals("Not found", ZipParser.findFileByName(filePath, existingFileName));
-        assertEquals(0, ZipParser.findFileByContent(filePath, existingFileContent).size());
+        assertEquals(notFound, JarParser.findFileByName(filePathJar, unExistingFileName));
+        assertEquals(0, JarParser.findFileByContent(filePathJar, unExistingFileContent).size());
     }
 }
