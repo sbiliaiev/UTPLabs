@@ -2,6 +2,7 @@ package entities.person;
 
 import java.text.Collator;
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.Objects;
 
 public abstract class Person implements Comparable<Person> {
@@ -63,6 +64,14 @@ public abstract class Person implements Comparable<Person> {
     @Override
     public int compareTo(Person o) {
         Collator polishCollator = Collator.getInstance(NationalityLocaleMap.getLocaleByNationality(Nationality.POLISH));
+
+//        return Comparator
+//            .comparing(Person::getFirstName)
+////            .thenComparing(Comparator.)
+//            .thenComparing(Person::getLastName)
+//            .compare(this, o)
+//        ;
+
         int res = polishCollator.compare(firstName, o.getFirstName());
         if (res == 0) {
             res = polishCollator.compare(lastName, o.getLastName());
