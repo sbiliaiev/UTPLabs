@@ -69,6 +69,7 @@ class PeselTest {
         extractSexMethod.setAccessible(true);
 
         assertEquals("male", extractSexMethod.invoke(p, number));
+        extractSexMethod.
 
         Method extractBirthDateMethod = peselClass.getDeclaredMethod("extractBirthDate", String.class);
         extractBirthDateMethod.setAccessible(true);

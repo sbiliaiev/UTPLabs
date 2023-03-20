@@ -110,6 +110,7 @@ public class UserRepository implements IRepository<User> {
             st.close();
 
             // add new groups relations
+            // should check existing relations
             List<Group> groupsList = user.getGroups();
             if (groupsList != null) {
                 for (Group group : groupsList) {
